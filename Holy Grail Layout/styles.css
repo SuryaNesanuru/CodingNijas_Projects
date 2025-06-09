@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  grid-template-columns:200px 1fr250px;
+  min-height:100vh;
+  gap: 24px16px;
+  padding: 24px;
+}
+
+header {
+  grid-area: header;
+  background: #4caf50;
+  color: #fff;
+  padding: 24px0;
+  text-align: center;
+  border-radius: 8px;
+}
+
+nav {
+  grid-area: nav;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 02px 6px #0001;
+
+}
+
+nav ul {
+  list-style: none;
+  padding:0;
+}
+
+nav li {
+  margin-bottom: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: 600;
+}
+
+main {
+  grid-area: main;
+  background: #fff;
+  padding:24px;
+  border-radius:8px;
+  box-shadow:0 2px 6px #0001;
+}
+
+main h2 {
+  margin-top: 0;
+}
+
+aside {
+  grid-area: aside;
+  background: #fff;
+  padding:16px;
+  border-radius:8px;
+  box-shadow: 02px 6px #0001;
+}
+
+footer {
+  grid-area: footer;
+  background: #4caf50;
+  color: #fff;
+  text-align: center;
+  padding:16px 0;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
