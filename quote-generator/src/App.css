@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-container {
+  max-width: 500px;
+  width: 90%;
+  padding: 20px;
+}
+
+.quote-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  transition: opacity 0.5s ease-in;
+  opacity: 0;
+}
+
+.quote-card.fade-in {
+  opacity: 1;
+}
+
+.quote {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #333;
+}
+
+.author {
+  text-align: right;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.loading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  background: #1d2b64;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #12204d;
+}
+
+.tweet-btn {
+  background: #1da1f2;
+}
+
+.tweet-btn:hover {
+  background: #0c85d0;
+}
