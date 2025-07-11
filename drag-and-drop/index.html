@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <h1>Kanban Board</h1>
+    <button id="toggle-theme">🌓 Toggle Theme</button>
+  </div>
+
+  <div class="board">
+    <div class="column" data-status="todo">
+      <h2>To Do</h2>
+      <div class="task-list" id="todo"></div>
+      <button onclick="openTaskModal('todo')">+ Add Task</button>
+    </div>
+    <div class="column" data-status="inprogress">
+      <h2>In Progress</h2>
+      <div class="task-list" id="inprogress"></div>
+      <button onclick="openTaskModal('inprogress')">+ Add Task</button>
+    </div>
+    <div class="column" data-status="done">
+      <h2>Done</h2>
+      <div class="task-list" id="done"></div>
+      <button onclick="openTaskModal('done')">+ Add Task</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="task-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3 id="modal-title">Add Task</h3>
+      <input type="text" id="task-title" placeholder="Title" />
+      <textarea id="task-desc" placeholder="Description"></textarea>
+      <select id="task-priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <div class="modal-actions">
+        <button onclick="saveTask()">Save</button>
+        <button onclick="closeTaskModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
