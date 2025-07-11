@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bio Data Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Bio Data Form</h1>
+       <form id="bioForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="number" id="age" placeholder="Age" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="phone" placeholder="Phone Number" required />
+      <textarea id="address" placeholder="Address" rows="3" required></textarea>
+      <button type="submit"> Submit</button>
+    </form>
+
+    <div id="output" class="output-box"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
